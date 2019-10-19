@@ -29,7 +29,7 @@ $(function(){
 
 
    
-
+        $('input[type="file"], select').styler();
 
 
 

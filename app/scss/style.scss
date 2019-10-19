@@ -1806,29 +1806,164 @@ padding-bottom: 100px;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //end settings
 
+//  start profile
+.profile-status {
+    border: 1px solid #d6d6d6;
+    color: #707070;
+    font-size: 13px;
+    padding: 6px 9px 5px 30px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        left: 11px;
+        height: 9px;
+        width: 9px;
+        border-radius: 50%;
+        top: 13px;
+    }
+}
+.profile-on{
+    &::before{
+        background-color: $green;
+    }
+}
+.profile-off{
+    &::before{
+    background-color: $red;
+    }
+}
+.profile__content {
+    width: 100%;
+}
+.profile__inner {
+    display: flex;
+    margin-bottom: 30px;
+}
+.profile__aside {
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+}
+
+
+.profile__aside-btn {
+    margin-bottom: 13px;
+    text-align: center;
+}
+.profile__aside-message {
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    @include f700;
+    padding: 18px 10px;
+    position: relative;
+    background-color: $text;
+    &::before{
+    position: absolute;
+}
+}
+.profile__aside-following {
+    margin-bottom: 17px;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    @include f700;
+    background-color: $green;
+    padding: 18px 10px;
+}
+.profile__banner {
+    background-color: #ddd;
+    padding: 20px;
+    border: 1px solid #dedede;
+    margin-bottom: 30px;
+   
+}
+.profile__banner-images {
+margin-bottom: 30px;
+    
+}
+.profile__items {
+display: flex;
+border: 1px solid #dedede;
+}
+.profile__item {
+width: 25%;
+background-color: #fff;
+text-align: center;
+padding: 20px 5px 17px;
+& + .profile__item{
+    border-left: 1px solid #dedede;
+}
+}
+.profile__item-title{
+font-size: 14px;
+color: $bg;
+@include f700;
+}
+.profile__item-content {
+    color: #707070;
+    font-size: 14px;
+    @include f700;
+    &.profile__item-sales{
+        color: $bg;
+    }
+}
+.profile-settings{
+
+}
+.personal-box{
+    background-color: #fff;
+    padding: 35px 40px 25px;
+    border: 1px solid #dedede;
+}
+.personal-box__title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    @include f700;
+    color: $bg;
+}
+.personal-box__text {
+    margin-bottom: 20px;
+    p{
+        color: #707070;
+    }
+}
+.personal-box__item-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.personal-box__item-name {
+    @include f700;
+    font-size: 16px;
+    color: $bg;
+    font-style: italic;
+}
+    
+
+.personal-box__item-number {
+    @include f700;
+    font-size: 16px;
+    color: $bg;
+}
+.personal-box__item-line {
+    background-color: #f4f4f4;
+    height: 15px;
+    border-radius: 3px;
+    margin-bottom: 23px;
+    span{
+        display: block;
+        border-radius: 3px;
+        height: 15px;
+        background-color: $green;
+    }
+}
 
 
 
@@ -1836,9 +1971,268 @@ padding-bottom: 100px;
 
 
 
+//end profile
+
+
+// start upload
+.upload {
+
+}
+.upload__inner {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    margin-bottom: 110px;
+    button{
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        margin-left: 155px;
+        cursor: pointer;
+    }
+}
+.upload__inner-title {
+    font-size: 24px;
+    @include f700;
+    padding: 16px 35px 18px;
+    color: $bg;
+    border-bottom:1px solid #dedede;;
+    margin-bottom: 40px;
+}
+.upload__inner-contant {
+    margin-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 50px;
+}
+.upload-line {
+    margin-bottom: 25px;
+    display: flex;
+    
+    label{
+     width: 175px;
+     padding-right: 15px;
+     color: #444;
+     padding-top: 5px;
+     span{
+         color: $green;
+     }
+    }
+    select,
+    input,
+    textarea{
+        width: 100%;
+        display: block;
+        border: 1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+    }
+    textarea{
+        resize: none;
+        height: 150px;
+        padding: 8px 18px;
+    }
+    &::placeholder{
+        color: #707070;
+    }
+    .jq-selectbox{
+        width: 100%;
+        
+    }
+    .jq-selectbox__select{
+        height: 40px;
+        padding: 0px 18px;
+        border: 1px solid #dedede;
+        border-bottom-color: #dedede;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        color: #333;
+        text-shadow: none;
+        font: 14px/32px Arial,sans-serif;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow{
+        border: none;
+    }
+    .jq-file{
+        box-shadow: none;
+        border-radius: 0px;
+        width: 100%;
+        border: 1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+    }
+    .jq-file__name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0;
+        border: none;
+        border-bottom-color: transparent;
+        border-radius: 0px;
+        background: transparent;
+        box-shadow: none;
+        padding: 0px 18px;
+        font-size: 12px;
+        color: #707070;
+        line-height: 40px;
+        margin-left: 100px;
+        
+    }
+    .jq-file__browse {
+        position: absolute;
+        top: 5px;
+        right: auto;
+        left: 9px;
+        padding: 0 12px;
+        border: 1px solid #dedede;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: 12px;
+        color: #444;;
+        line-height: 26px;
+    }
+}
 
 
 
+
+//end upload
+
+
+
+
+//start with
+.withdrawals__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+
+.withdrawals_col {
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+}
+.withdrawals__title {
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    color: $bg;
+    @include f500;
+    font-size: 24px;
+}
+.withdrawals__content {
+    padding-left: 35px;
+    padding-right: 40px;
+    button{
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        
+        cursor: pointer;
+    }
+}
+.withdrawals__form-line {
+    margin-bottom: 25px;
+    label{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f700;
+        margin-bottom: 15px;
+        color: $bg;
+    }
+    span{
+         color: $green;
+    }
+    input,
+    select{
+        width: 100%;
+        display: block;
+        border: 1px solid #dedede;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+    }
+    .jq-selectbox{
+        width: 100%;
+        
+    }
+    .jq-selectbox__select{
+        height: 40px;
+        padding: 0px 18px;
+        border: 1px solid #dedede;
+        border-bottom-color: #dedede;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        color: #333;
+        text-shadow: none;
+        font: 14px/32px Arial,sans-serif;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow{
+        border: none;
+    }
+}
+
+
+
+
+
+.withdrawals__content-items{
+ margin-bottom: 35px;
+}
+.withdrawals__content-item {
+   display: flex;
+   height: 42px;
+   align-items: center;
+   font-size: 13px;
+   color: #444444;
+   &:nth-child(odd){
+    background-color: #f9f9f9;
+   }
+
+   
+}
+.withdrawals__content-date {
+    width: 154px;
+    padding-left: 20px;
+    @include f700;
+}
+.withdrawals__content-email {
+    width: 180px;
+    @include f700;
+}
+.withdrawals__content-price {
+    width: 70px;
+    @include f500;
+}
+.withdrawals__content-status {
+    width: 88px;
+    
+    &.withdrawals__content-paid{
+        color: $green;
+    }
+    &.withdrawals__content-pending{
+
+    }
+}
+
+
+
+
+
+
+//end with
 
 
 
